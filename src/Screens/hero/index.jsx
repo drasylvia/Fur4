@@ -22,21 +22,6 @@ export default function Hero() {
     if (heroBannerRef.current && containerRef.current) {
       const container = containerRef.current;
       const containerHeigh = container.clientHeight;
-
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: container,
-            start: 'top',
-            end: `bottom`,
-            pin: true,
-            scrub: 1,
-          },
-        })
-        .to(heroBannerRef.current, {
-          y: '-=200',
-          duration: 1,
-        });
     }
   }, [loading]);
 
