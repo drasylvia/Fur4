@@ -2,14 +2,14 @@
   @apply w-screen h-screen py-12;
 
   .canvas {
-    @apply w-screen h-screen relative left-0 top-0 flex items-center;
+    @apply w-screen h-full max-h-[70rem] relative left-0 top-0 flex items-center;
 
     .canvasContent {
       @apply w-full h-full relative;
     }
 
     .content {
-      @apply w-full max-w-4xl h-full absolute top-0 left-1/2 -translate-x-1/2 z-10 py-9;
+      @apply w-full max-w-4xl h-full absolute left-1/2 -translate-x-1/2 z-10 py-16;
 
       .sectionArea {
         @apply relative w-full h-full max-h-[90rem];

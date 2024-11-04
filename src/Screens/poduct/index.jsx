@@ -66,9 +66,9 @@ const ProductView = () => {
             },
           })
           .to(modelRef.current.scale, {
-            x: 0.45,
-            y: 0.45,
-            z: 0.45,
+            x: 0.47,
+            y: 0.47,
+            z: 0.47,
             duration: 1.2,
           })
           .to(
@@ -261,7 +261,7 @@ const ProductView = () => {
             />
             <group
               ref={modelRef}
-              position={[0, 0.1, 0]}
+              position={[0, 0, 0]}
               rotation={[0, Math.PI, 0]}
               dispose={null}
               scale={0.6}>
