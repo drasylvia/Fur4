@@ -1,7 +1,19 @@
 .wrapper {
-  @apply sticky top-0 py-4 bg-white bg-opacity-40;
+  @apply sticky top-0 py-4 bg-white;
 
-  .logo {
-    @apply h-14 w-auto;
+  .container {
+    @apply flex items-center justify-between;
+
+    .logoSection {
+      @apply flex items-center gap-2;
+
+      .logo {
+        @apply h-12 w-auto;
+      }
+
+      .brand {
+        @apply font-bold text-3xl;
+      }
+    }
   }
 }
