@@ -66,9 +66,9 @@ const ProductView = () => {
             },
           })
           .to(modelRef.current.scale, {
-            x: 0.4,
-            y: 0.4,
-            z: 0.4,
+            x: 0.45,
+            y: 0.45,
+            z: 0.45,
             duration: 1.2,
           })
           .to(
@@ -261,10 +261,10 @@ const ProductView = () => {
             />
             <group
               ref={modelRef}
-              position={[0, -0.3, 0]}
+              position={[0, 0.1, 0]}
               rotation={[0, Math.PI, 0]}
               dispose={null}
-              scale={0.5}>
+              scale={0.6}>
               <Brush gentlerMode={false} />
               <group position={[0, 0.3, 0]} ref={gentlerRef}>
                 {[
@@ -320,52 +320,56 @@ const ProductView = () => {
             </group>
           </Canvas>
         </div>
-      </div>
-      <div className={styles.content}>
-        <div className={styles.sectionArea}>
-          <div ref={section1} className={styles.section}>
-            <h2 className={styles.heading}>FUR 4</h2>
-            <p className={styles.description}>
-              Designed to dramatically reduce shedding for dogs and cats
-            </p>
-            <p className={styles.description}>Patented Technology</p>
-          </div>
-          <div ref={section2} className={styles.section}>
-            <h2 className={styles.heading}>Safer</h2>
-            <div ref={warnImageRef} className={styles.warnImage}>
-              <img className={styles.image} src="/noHarshBlades.png" alt="" />
-              <h2 className={styles.warnHeading}>NO HARSH</h2>
-              <h2 className={styles.warnHeading}>METAL BLADES</h2>
-            </div>
-            <div ref={nubsRef} className={styles.nubs}>
-              <h3 className={styles.nubsHeading}>
-                EIGHT
-                <span className={styles.highlight}>
-                  SafetyNubs<sup className={styles.sup}>TM</sup>
-                </span>
-              </h3>
-              <p className={styles.nubDescription}>
-                to prevent scrapping and irritation
+        <div className={styles.content}>
+          <div className={styles.sectionArea}>
+            <div ref={section1} className={styles.section}>
+              <h2 className={styles.heading}>FUR 4</h2>
+              <p className={styles.description}>
+                Designed to dramatically reduce shedding for dogs and cats
               </p>
-              <div className={styles.arrow}>
-                <img src="/arrow.svg" alt="img" className={styles.arrowImage} />
-              </div>
+              <p className={styles.description}>Patented Technology</p>
             </div>
-            <button ref={buttonRef} className={styles.button}>
-              Learn More
-            </button>
-          </div>
-          <div
-            ref={section3}
-            className={classNames(styles.section, styles.section3)}>
-            <h2 className={styles.heading}>Gentler</h2>
-            <p className={styles.description}>
-              Four deSheding edges spread out pressure for a comforable grooming
-              experience without damaging your dog s topcoat.
-            </p>
-            <p className={styles.description}>
-              Gently removes loose hair and undercoat.
-            </p>
+            <div ref={section2} className={styles.section}>
+              <h2 className={styles.heading}>Safer</h2>
+              <div ref={warnImageRef} className={styles.warnImage}>
+                <img className={styles.image} src="/noHarshBlades.png" alt="" />
+                <h2 className={styles.warnHeading}>NO HARSH</h2>
+                <h2 className={styles.warnHeading}>METAL BLADES</h2>
+              </div>
+              <div ref={nubsRef} className={styles.nubs}>
+                <h3 className={styles.nubsHeading}>
+                  EIGHT
+                  <span className={styles.highlight}>
+                    SafetyNubs<sup className={styles.sup}>TM</sup>
+                  </span>
+                </h3>
+                <p className={styles.nubDescription}>
+                  to prevent scrapping and irritation
+                </p>
+                <div className={styles.arrow}>
+                  <img
+                    src="/arrow.svg"
+                    alt="img"
+                    className={styles.arrowImage}
+                  />
+                </div>
+              </div>
+              <button ref={buttonRef} className={styles.button}>
+                Learn More
+              </button>
+            </div>
+            <div
+              ref={section3}
+              className={classNames(styles.section, styles.section3)}>
+              <h2 className={styles.heading}>Gentler</h2>
+              <p className={styles.description}>
+                Four deSheding edges spread out pressure for a comforable
+                grooming experience without damaging your dog s topcoat.
+              </p>
+              <p className={styles.description}>
+                Gently removes loose hair and undercoat.
+              </p>
+            </div>
           </div>
         </div>
       </div>
