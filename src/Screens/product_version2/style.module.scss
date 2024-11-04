@@ -1,0 +1,7 @@
+.wrapper {
+  @apply w-screen h-screen;
+
+  .canvas {
+    @apply w-full h-full;
+  }
+}

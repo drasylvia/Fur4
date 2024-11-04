@@ -21,7 +21,7 @@ export default [
         {
           singleQuote: true,
           trailingComma: 'all',
-          printWidth: 80,
+          printWidth: 150,
           endOfLine: 'auto',
         },
       ],

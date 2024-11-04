@@ -7,6 +7,7 @@ import Pets from './Screens/pets';
 import ProductView from './Screens/poduct';
 import Video from './Screens/video';
 import Header from './Screens/header';
+import ProductVersion2 from './Screens/product_version2';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       <Hero />
       <Pets />
       <Video />
-      <ProductView />
+      {/* <ProductView /> */}
+      <ProductVersion2 />
       <Features />
       <Info />
       <Footer />
