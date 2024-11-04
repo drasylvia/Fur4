@@ -1,0 +1,7 @@
+.wrapper {
+  @apply flex justify-center items-center flex-col pb-24;
+
+  .content {
+    @apply text-4xl md:text-6xl p-4 font-extrabold text-center text-[#00aeef];
+  }
+}

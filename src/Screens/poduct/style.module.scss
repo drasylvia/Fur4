@@ -1,0 +1,79 @@
+.wrapper {
+  @apply w-full px-5 h-screen relative;
+
+  .canvas {
+    @apply w-full h-full absolute left-0 top-0 flex items-center;
+
+    .canvasContent {
+      @apply w-full max-h-[60rem] h-full relative;
+    }
+  }
+
+  .content {
+    @apply w-full max-w-4xl h-full absolute top-0 left-1/2 -translate-x-1/2 z-10 flex flex-col justify-center items-center;
+
+    .sectionArea {
+      @apply relative w-full h-full max-h-[30rem] my-auto;
+
+      .section {
+        @apply h-full w-full opacity-0 absolute inset-0;
+
+        &.section3 {
+          @apply right-1/2 top-1/2 translate-x-[600px] w-fit h-fit;
+        }
+
+        .heading {
+          @apply text-4xl font-bold text-[#00aeef];
+        }
+
+        .description {
+          @apply text-base font-bold mt-2 max-w-72;
+        }
+
+        .warnImage {
+          @apply absolute top-1/2 -translate-y-1/2 max-w-80 flex flex-col items-center;
+
+          .image {
+            @apply w-24 mt-2 ml-2;
+          }
+
+          .warnHeading {
+            @apply text-red-500 text-xl font-bold;
+          }
+        }
+
+        .nubs {
+          @apply max-w-72 text-lg font-bold opacity-0 relative;
+
+          .nubsHeading {
+            @apply text-2xl font-bold relative z-10 leading-8;
+
+            .highlight {
+              @apply text-[#00aeef] ml-1;
+
+              .sup {
+                @apply text-base;
+              }
+            }
+          }
+
+          .nubDescription {
+            @apply mt-2;
+          }
+
+          .arrow {
+            @apply absolute top-8 w-32 bg-orange-400 h-3 z-0 right-1;
+
+            .arrowImage {
+              @apply h-6 w-12 absolute -right-5 -top-[6px];
+            }
+          }
+        }
+
+        .button {
+          @apply bg-[#00aeef] pt-2 pb-3 px-4 w-fit whitespace-nowrap rounded-full z-50 absolute bottom-0 left-32 -translate-x-1/2 text-white font-bold text-xl;
+        }
+      }
+    }
+  }
+}

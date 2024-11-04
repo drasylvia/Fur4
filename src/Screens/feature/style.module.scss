@@ -1,0 +1,19 @@
+.wrapper {
+  @apply flex justify-center items-center flex-col px-5;
+
+  .headingWrapper {
+    @apply text-4xl md:text-8xl font-extrabold text-center;
+  }
+
+  .content {
+    @apply block md:flex justify-center items-center gap-8 mt-12 max-w-7xl mx-auto;
+
+    .text {
+      @apply font-bold text-lg md:text-xl;
+    }
+
+    .image {
+      @apply w-full max-w-[400px] object-cover;
+    }
+  }
+}

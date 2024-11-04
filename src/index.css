@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Andale Mono";
+  src: url("fonts/AndaleMono.woff2") format("woff2"),
+    url("fonts/AndaleMono.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AXIS Std Light";
+  src: url("fonts/AxisStd-Light.woff2") format("woff2"),
+    url("fonts/AxisStd-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply w-full overflow-x-hidden;
+}
+
+.blueBg {
+  background: linear-gradient(to right, #00aeef, #007ead, #00aeef);
+}
