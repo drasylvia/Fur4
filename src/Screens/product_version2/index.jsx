@@ -36,21 +36,21 @@ const ProductVersion2 = () => {
           .set(brushRef.current.scale, { x: 1, y: 1, z: 1 })
           .fromTo(brushRef.current.position, { y: -7, duration: 1 }, { y: 0 })
           .to(brushRef.current.scale, { x: 0.5, y: 0.5, z: 0.5, duration: 1 })
-          .to(brushRef.current.rotation, { x: 0.3, y: `+=${2 * Math.PI}`, z: `-=${0.5 * Math.PI}`, duration: 1 }, '<')
+          .to(brushRef.current.rotation, { x: 0.1, y: `+=${2 * Math.PI}`, z: `-=${0.8 * Math.PI}`, duration: 1 }, '<')
           .to(brushRef.current.position, { y: 7, duration: 1 }, '>')
           //Screen 2
           .set(brushRef.current.rotation, { x: 0, z: 0.4 * Math.PI, y: 0 }, '>')
           .set(brushRef.current.scale, { x: 1, y: 1, z: 1 })
           .fromTo(brushRef.current.position, { y: -7, duration: 1 }, { y: 0 })
           .to(brushRef.current.scale, { x: 0.5, y: 0.5, z: 0.5, duration: 1 })
-          .to(brushRef.current.rotation, { x: 0.3, y: `+=${2 * Math.PI}`, z: `-=${0.5 * Math.PI}`, duration: 1 }, '<')
+          .to(brushRef.current.rotation, { x: 0.1, y: `+=${2 * Math.PI}`, z: `-=${0.8 * Math.PI}`, duration: 1 }, '<')
           .to(brushRef.current.position, { y: 7, duration: 1 }, '>')
           //Screen 3
           .set(brushRef.current.rotation, { x: 0, z: 0.4 * Math.PI, y: 0 }, '>')
           .set(brushRef.current.scale, { x: 1, y: 1, z: 1 })
           .fromTo(brushRef.current.position, { y: -7, duration: 1 }, { y: 0 })
           .to(brushRef.current.scale, { x: 0.5, y: 0.5, z: 0.5, duration: 1 })
-          .to(brushRef.current.rotation, { x: 0.3, y: `+=${2 * Math.PI}`, z: `-=${0.5 * Math.PI}`, duration: 1 }, '<')
+          .to(brushRef.current.rotation, { x: 0.1, y: `+=${2 * Math.PI}`, z: `-=${0.8 * Math.PI}`, duration: 1 }, '<')
           .to(brushRef.current.position, { y: 7, duration: 1 }, '>');
       }
     }, 1000);

@@ -45,12 +45,8 @@ const ProductView = () => {
       ) {
         clearInterval(interVal);
 
-        const gentlerMaterials = gentlerRef.current.children.map(
-          (item) => item.material,
-        );
-        const safetyMaterials = safetyRef.current.children
-          .map((item) => item.children.map((chi) => chi.material))
-          .flat();
+        const gentlerMaterials = gentlerRef.current.children.map((item) => item.material);
+        const safetyMaterials = safetyRef.current.children.map((item) => item.children.map((chi) => chi.material)).flat();
 
         const container = containerRef.current;
         const containerHeight = container.clientHeight;
@@ -253,18 +249,8 @@ const ProductView = () => {
             }}>
             <ambientLight />
             <directionalLight position={[0, 2, 3]} />
-            <pointLight
-              position={[2, 1.5, 1]}
-              intensity={3}
-              distance={5}
-              decay={0}
-            />
-            <group
-              ref={modelRef}
-              position={[0, -0.3, 0]}
-              rotation={[0, Math.PI, 0]}
-              dispose={null}
-              scale={0.5}>
+            <pointLight position={[2, 1.5, 1]} intensity={3} distance={5} decay={0} />
+            <group ref={modelRef} position={[0, -0.3, 0]} rotation={[0, Math.PI, 0]} dispose={null} scale={0.5}>
               <Brush gentlerMode={false} />
               <group position={[0, 0.3, 0]} ref={gentlerRef}>
                 {[
@@ -273,16 +259,8 @@ const ProductView = () => {
                   [0, 2.7, 1.8],
                   [0, 1.3, 1.8],
                 ].map((pos, idx) => (
-                  <Cylinder
-                    key={idx}
-                    args={[0.1, 0.1, 3.5]}
-                    position={pos}
-                    rotation={[0, 0, Math.PI / 2]}>
-                    <meshStandardMaterial
-                      color="orange"
-                      transparent
-                      opacity={0}
-                    />
+                  <Cylinder key={idx} args={[0.1, 0.1, 3.5]} position={pos} rotation={[0, 0, Math.PI / 2]}>
+                    <meshStandardMaterial color="orange" transparent opacity={0} />
                   </Cylinder>
                 ))}
               </group>
@@ -294,25 +272,11 @@ const ProductView = () => {
                   [0, 1.36, 1.9],
                 ].map((pos, idx) => (
                   <group key={idx}>
-                    <Torus
-                      args={[0.28, 0.02, 128, 128]}
-                      position={[pos[0] - 1.75, pos[1], pos[2]]}
-                      rotation={[0, 0, Math.PI / 2]}>
-                      <meshStandardMaterial
-                        color="orange"
-                        transparent
-                        opacity={0}
-                      />
+                    <Torus args={[0.28, 0.02, 128, 128]} position={[pos[0] - 1.75, pos[1], pos[2]]} rotation={[0, 0, Math.PI / 2]}>
+                      <meshStandardMaterial color="orange" transparent opacity={0} />
                     </Torus>
-                    <Torus
-                      args={[0.28, 0.02, 128, 128]}
-                      position={[pos[0] + 1.95, pos[1], pos[2]]}
-                      rotation={[0, 0, Math.PI / 2]}>
-                      <meshStandardMaterial
-                        color="orange"
-                        transparent
-                        opacity={0}
-                      />
+                    <Torus args={[0.28, 0.02, 128, 128]} position={[pos[0] + 1.95, pos[1], pos[2]]} rotation={[0, 0, Math.PI / 2]}>
+                      <meshStandardMaterial color="orange" transparent opacity={0} />
                     </Torus>
                   </group>
                 ))}
@@ -325,9 +289,7 @@ const ProductView = () => {
         <div className={styles.sectionArea}>
           <div ref={section1} className={styles.section}>
             <h2 className={styles.heading}>FUR 4</h2>
-            <p className={styles.description}>
-              Designed to dramatically reduce shedding for dogs and cats
-            </p>
+            <p className={styles.description}>Designed to dramatically reduce shedding for dogs and cats</p>
             <p className={styles.description}>Patented Technology</p>
           </div>
           <div ref={section2} className={styles.section}>
@@ -344,9 +306,7 @@ const ProductView = () => {
                   SafetyNubs<sup className={styles.sup}>TM</sup>
                 </span>
               </h3>
-              <p className={styles.nubDescription}>
-                to prevent scrapping and irritation
-              </p>
+              <p className={styles.nubDescription}>to prevent scrapping and irritation</p>
               <div className={styles.arrow}>
                 <img src="/arrow.svg" alt="img" className={styles.arrowImage} />
               </div>
@@ -355,17 +315,12 @@ const ProductView = () => {
               Learn More
             </button>
           </div>
-          <div
-            ref={section3}
-            className={classNames(styles.section, styles.section3)}>
+          <div ref={section3} className={classNames(styles.section, styles.section3)}>
             <h2 className={styles.heading}>Gentler</h2>
             <p className={styles.description}>
-              Four deSheding edges spread out pressure for a comforable grooming
-              experience without damaging your dog s topcoat.
+              Four deSheding edges spread out pressure for a comforable grooming experience without damaging your dog s topcoat.
             </p>
-            <p className={styles.description}>
-              Gently removes loose hair and undercoat.
-            </p>
+            <p className={styles.description}>Gently removes loose hair and undercoat.</p>
           </div>
         </div>
       </div>
